@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kanimozhi S · AI & Software Developer</title>
+<title>Kanimozhi S · Electronics & AI Engineer</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
 
@@ -72,10 +72,22 @@
     font-size: 16px;
     color: #888780;
     font-weight: 300;
-    max-width: 480px;
+    max-width: 520px;
     line-height: 1.7;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
+
+  /* Signal motif: an analog wave settling into digital steps —
+     the hardware-meets-intelligence thread that runs through the work */
+  .signal {
+    width: 100%;
+    max-width: 460px;
+    height: 36px;
+    margin-bottom: 32px;
+    opacity: 0.8;
+  }
+  .signal path { fill: none; stroke: #534AB7; stroke-width: 1.6; }
+  .signal .digital { stroke: #7F77DD; }
 
   .cta-row {
     display: flex;
@@ -168,7 +180,7 @@
     font-size: 18px;
     line-height: 1.8;
     color: #888780;
-    max-width: 600px;
+    max-width: 620px;
     font-weight: 300;
   }
 
@@ -176,6 +188,89 @@
     color: #b4b2a9;
     font-weight: 400;
   }
+
+  /* Education timeline */
+  .timeline {
+    margin-top: 8px;
+    max-width: 640px;
+    position: relative;
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 32px;
+    padding-bottom: 36px;
+    border-left: 1px solid #1e1e2e;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #0a0a0f;
+    border: 2px solid #534AB7;
+  }
+  .timeline-period {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #7F77DD;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .timeline-degree {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: #f0ece4;
+    margin-bottom: 4px;
+  }
+  .timeline-school {
+    font-size: 14px;
+    color: #5F5E5A;
+    margin-bottom: 6px;
+  }
+  .timeline-score {
+    display: inline-block;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 2px;
+    background: #1a1a28;
+    color: #888780;
+    letter-spacing: 0.5px;
+  }
+
+  /* Skills */
+  .skills-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 700px;
+  }
+  .skill-category-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5F5E5A;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .skill-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .skill-tag {
+    font-size: 14px;
+    padding: 9px 16px;
+    border-radius: 4px;
+    border: 1px solid #1e1e2e;
+    color: #b4b2a9;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .skill-tag:hover { border-color: #534AB7; color: #e8e4dc; }
 
   .projects-grid {
     display: grid;
@@ -225,8 +320,8 @@
 
   .project-desc {
     font-size: 14px;
-    color: #5F5E5A;
-    line-height: 1.6;
+    color: #888780;
+    line-height: 1.7;
   }
 
   .project-tags {
@@ -246,25 +341,83 @@
     font-weight: 500;
   }
 
-  .skills-grid {
+  /* Experience */
+  .exp-card {
+    max-width: 700px;
+    display: flex;
+    gap: 28px;
+  }
+  .exp-period {
+    flex-shrink: 0;
+    width: 120px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #7F77DD;
+    padding-top: 4px;
+  }
+  .exp-role {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #f0ece4;
+    margin-bottom: 4px;
+  }
+  .exp-org {
+    font-size: 14px;
+    color: #5F5E5A;
+    margin-bottom: 12px;
+  }
+  .exp-desc {
+    font-size: 14px;
+    color: #888780;
+    line-height: 1.7;
+    max-width: 540px;
+  }
+
+  /* Recognition */
+  .recognition-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .recognition-col-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5F5E5A;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .list-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #1e1e2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     gap: 16px;
   }
-
-  .skill-item {
-    border: 1px solid #1e1e2e;
-    border-radius: 6px;
-    padding: 20px 16px;
-    text-align: center;
-    transition: border-color 0.3s;
+  .list-item:last-child { border-bottom: none; }
+  .list-item-title {
+    font-size: 14.5px;
+    color: #b4b2a9;
+    line-height: 1.5;
   }
-
-  .skill-item:hover { border-color: #534AB7; }
-
-  .skill-icon { font-size: 24px; margin-bottom: 10px; display: block; }
-
-  .skill-name { font-size: 13px; color: #888780; font-weight: 500; }
+  .list-item-sub {
+    font-size: 12px;
+    color: #444441;
+    margin-top: 3px;
+  }
+  .badge {
+    flex-shrink: 0;
+    font-size: 10px;
+    padding: 3px 9px;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .badge-gold { background: rgba(212,175,55,0.12); color: #D4AF37; }
+  .badge-silver { background: rgba(170,170,180,0.12); color: #AAAAB4; }
+  .badge-finalist { background: rgba(83,74,183,0.15); color: #7F77DD; }
 
   .contact-block {
     display: flex;
@@ -288,9 +441,9 @@
 
   .contact-note {
     font-size: 14px;
-    color: #444441;
-    margin-top: 12px;
-    line-height: 1.6;
+    color: #5F5E5A;
+    margin-top: 16px;
+    line-height: 1.7;
   }
 
   .social-links {
@@ -324,9 +477,12 @@
   @media (max-width: 768px) {
     .hero, section, footer { padding: 60px 24px; }
     .projects-grid { grid-template-columns: 1fr; }
-    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .recognition-grid { grid-template-columns: 1fr; gap: 32px; }
+    .exp-card { flex-direction: column; gap: 8px; }
+    .exp-period { width: auto; }
     .hero-num { font-size: 72px; right: 24px; bottom: 24px; }
     footer { flex-direction: column; gap: 8px; text-align: center; }
+    .list-item { flex-direction: column; align-items: flex-start; gap: 6px; }
   }
 </style>
 </head>
@@ -335,12 +491,17 @@
 <!-- Hero -->
 <section class="hero">
   <div class="grid-bg"></div>
-  <div class="tag"><span class="accent-dot"></span>Portfolio · 2025</div>
+  <div class="tag"><span class="accent-dot"></span>Engineering Portfolio · 2026</div>
   <h1>Kanimozhi<br><span>S.</span></h1>
-  <p class="subtitle">AI & Software Developer — crafting intelligent systems and real-time solutions at the intersection of embedded tech and machine learning.</p>
+  <svg class="signal" viewBox="0 0 460 36" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,18 Q15,2 30,18 T60,18 T90,18 T120,18" />
+    <path class="digital" d="M140,18 L140,10 L165,10 L165,26 L190,26 L190,6 L215,6 L215,30 L240,30 L240,14 L265,14 L265,22 L290,22 L290,18 L460,18" />
+  </svg>
+  <p class="subtitle">Electronics & Communication Engineering student building at the point where sensors meet software — from a temperature-controlled prosthetic device to an NLP model that flags fake news.</p>
   <div class="cta-row">
     <a href="#projects" class="btn-primary">View Projects</a>
     <a href="#contact" class="btn-outline">Get in Touch</a>
+    <a href="Kanimozhi_S_Resume.pdf" download class="btn-outline">Download Resume ↓</a>
   </div>
   <div class="hero-num">KS</div>
 </section>
@@ -348,37 +509,38 @@
 <!-- About -->
 <section id="about">
   <div class="section-label"><span>01 · About</span></div>
-  <h2>Building what matters.</h2>
+  <h2>Where circuits meet code.</h2>
   <p class="about-text">
-    I'm a developer with a deep interest in <strong>AI, software architecture</strong>, and <strong>real-time systems</strong>.
-    I love working at the edges where hardware meets intelligence — building solutions that are fast, purposeful, and technically elegant.
+    I'm a final-year <strong>ECE</strong> student at Rathinam Technical Campus, carrying a <strong>9.1 CGPA</strong> and a habit of building
+    things that work in the real world, not just on a breadboard or in a notebook. I've engineered a sensor-driven medical device for
+    prosthetic fitting and trained a <strong>machine learning model</strong> to separate real news from fake — work that moves between
+    embedded C and Python, microcontrollers and TF-IDF vectors. I was selected a <strong>Grand Finalist at Smart India Hackathon</strong>,
+    and I'm always looking for the next problem worth that kind of focus.
   </p>
 </section>
 
-<!-- Projects -->
-<section id="projects">
-  <div class="section-label"><span>02 · Projects</span></div>
-  <h2>Selected Work</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-num">PROJECT · 01</div>
-      <div class="project-title">AI Smart Trolley System</div>
-      <p class="project-desc">An intelligent shopping assistant that uses AI to track items, manage billing, and streamline the retail experience in real time.</p>
-      <div class="project-tags">
-        <span class="pill">AI</span>
-        <span class="pill">Embedded</span>
-        <span class="pill">Real-time</span>
-      </div>
+<!-- Education -->
+<section id="education">
+  <div class="section-label"><span>02 · Education</span></div>
+  <h2>Academic Background</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-period">2023 — Present</div>
+      <div class="timeline-degree">Bachelor of Engineering, Electronics & Communication Engineering</div>
+      <div class="timeline-school">Rathinam Technical Campus, Coimbatore</div>
+      <span class="timeline-score">CGPA 9.1</span>
     </div>
-    <div class="project-card">
-      <div class="project-num">PROJECT · 02</div>
-      <div class="project-title">2D Matrix Sorting Program</div>
-      <p class="project-desc">An efficient algorithm implementation for multi-dimensional data sorting, demonstrating core computational and data-structure skills.</p>
-      <div class="project-tags">
-        <span class="pill">Java</span>
-        <span class="pill">Algorithms</span>
-        <span class="pill">DSA</span>
-      </div>
+    <div class="timeline-item">
+      <div class="timeline-period">2022 — 2023</div>
+      <div class="timeline-degree">Higher Secondary Certificate (HSC)</div>
+      <div class="timeline-school">Annai Velankanni Matriculation Hr. Sec. School, Singampunari</div>
+      <span class="timeline-score">86%</span>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-period">2020 — 2021</div>
+      <div class="timeline-degree">Secondary School Leaving Certificate (SSLC)</div>
+      <div class="timeline-school">Annai Velankanni Matriculation Hr. Sec. School, Singampunari</div>
+      <span class="timeline-score">100%</span>
     </div>
   </div>
 </section>
@@ -387,46 +549,171 @@
 <section id="skills">
   <div class="section-label"><span>03 · Skills</span></div>
   <h2>Technical Stack</h2>
-  <div class="skills-grid">
-    <div class="skill-item">
-      <span class="skill-icon">☕</span>
-      <div class="skill-name">Java</div>
+  <div class="skills-categories">
+    <div>
+      <div class="skill-category-label">Programming</div>
+      <div class="skill-tags">
+        <span class="skill-tag">C</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">Data Structures</span>
+        <span class="skill-tag">SQL (Basic)</span>
+      </div>
     </div>
-    <div class="skill-item">
-      <span class="skill-icon">⚙️</span>
-      <div class="skill-name">C</div>
+    <div>
+      <div class="skill-category-label">Tools</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Arduino IDE</span>
+        <span class="skill-tag">Tinkercad</span>
+        <span class="skill-tag">NI Multisim</span>
+        <span class="skill-tag">EasyEDA</span>
+        <span class="skill-tag">Electric Circuit Studio</span>
+        <span class="skill-tag">Logic Circuit Simulator</span>
+        <span class="skill-tag">Selenium</span>
+      </div>
     </div>
-    <div class="skill-item">
-      <span class="skill-icon">🤖</span>
-      <div class="skill-name">AI Basics</div>
+    <div>
+      <div class="skill-category-label">Soft Skills</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Adaptability</span>
+        <span class="skill-tag">Teamwork</span>
+        <span class="skill-tag">Leadership</span>
+        <span class="skill-tag">Quick Learner</span>
+      </div>
     </div>
-    <div class="skill-item">
-      <span class="skill-icon">🔌</span>
-      <div class="skill-name">Embedded Systems</div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="section-label"><span>04 · Projects</span></div>
+  <h2>Selected Work</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-num">PROJECT · 01</div>
+      <div class="project-title">Compact & Portable Soft Insert Contouring Device</div>
+      <p class="project-desc">A portable medical device that precisely contours prosthetic soft inserts using sensor-based temperature control — an automated, user-friendly system built to improve fitting accuracy, patient comfort, and fabrication efficiency.</p>
+      <div class="project-tags">
+        <span class="pill">Microcontrollers</span>
+        <span class="pill">Embedded C</span>
+        <span class="pill">Temperature Sensors</span>
+        <span class="pill">Feedback Control</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-num">PROJECT · 02</div>
+      <div class="project-title">Fake News Detection System</div>
+      <p class="project-desc">A machine learning web app that classifies news articles as Real or Fake using NLP and TF-IDF vectorization. A Logistic Regression model handles the binary classification, deployed through Flask with a simple web interface.</p>
+      <div class="project-tags">
+        <span class="pill">Python</span>
+        <span class="pill">NLP</span>
+        <span class="pill">TF-IDF</span>
+        <span class="pill">Flask</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <div class="section-label"><span>05 · Experience</span></div>
+  <h2>Internship</h2>
+  <div class="exp-card">
+    <div class="exp-period">07/2025 — 08/2025<br>Coimbatore</div>
+    <div>
+      <div class="exp-role">Engineering Training Intern</div>
+      <div class="exp-org">R-Fab X Studio · Rathinam IDEA Lab</div>
+      <p class="exp-desc">Completed a 32-day technical internship focused on hands-on engineering fundamentals and problem-solving, collaborating on team workshops and projects with strong initiative, discipline, and professional teamwork.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Recognition -->
+<section id="recognition">
+  <div class="section-label"><span>06 · Recognition</span></div>
+  <h2>Certifications & Achievements</h2>
+  <div class="recognition-grid">
+    <div>
+      <div class="recognition-col-label">Certifications</div>
+      <div class="list-item">
+        <div>
+          <div class="list-item-title">Design Thinking for Innovation</div>
+          <div class="list-item-sub">University of Virginia · Coursera</div>
+        </div>
+      </div>
+      <div class="list-item">
+        <div>
+          <div class="list-item-title">MATLAB Onramp</div>
+          <div class="list-item-sub">MathWorks Training Services</div>
+        </div>
+      </div>
+      <div class="list-item">
+        <div>
+          <div class="list-item-title">Computer Vision Basics</div>
+          <div class="list-item-sub">Coursera</div>
+        </div>
+      </div>
+      <div class="list-item">
+        <div>
+          <div class="list-item-title">Introduction to Image Processing</div>
+          <div class="list-item-sub">Coursera</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="recognition-col-label">Achievements</div>
+      <div class="list-item">
+        <div>
+          <div class="list-item-title">Grand Finalist, Smart India Hackathon (SIH)</div>
+          <div class="list-item-sub">2025</div>
+        </div>
+        <span class="badge badge-finalist">FINALIST</span>
+      </div>
+      <div class="list-item">
+        <div>
+          <div class="list-item-title">NPTEL — Fuzzy Sets, Logic & Systems Applications</div>
+          <div class="list-item-sub">2025</div>
+        </div>
+        <span class="badge badge-gold">GOLD · 90%</span>
+      </div>
+      <div class="list-item">
+        <div>
+          <div class="list-item-title">NPTEL — Introduction to IoT</div>
+          <div class="list-item-sub">2025</div>
+        </div>
+        <span class="badge badge-silver">SILVER · 77%</span>
+      </div>
+      <div class="list-item">
+        <div>
+          <div class="list-item-title">Finalist, Startify 3.0 "IP-to-IPO" Innovation Competition</div>
+          <div class="list-item-sub">CED, Anna University · 2025</div>
+        </div>
+        <span class="badge badge-finalist">FINALIST</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Contact -->
 <section id="contact">
-  <div class="section-label"><span>04 · Contact</span></div>
+  <div class="section-label"><span>07 · Contact</span></div>
   <div class="contact-block">
     <div class="contact-left">
       <h2>Let's connect.</h2>
       <a href="mailto:kani2005sharavanan@gmail.com" class="contact-email">kani2005sharavanan@gmail.com</a>
-      <p class="contact-note">Open to collaborations, internships,<br>and interesting projects.</p>
+      <p class="contact-note">+91 8122698312 · Sivagangai, Tamil Nadu<br>Open to collaborations, internships, and interesting projects.</p>
     </div>
     <div>
       <div class="social-links">
         <a href="https://github.com/kanimozhisharavanan" target="_blank" class="social-link">GitHub</a>
-        <a href="#" class="social-link">LinkedIn</a>
+        <a href="https://linkedin.com/in/kanimozhi17" target="_blank" class="social-link">LinkedIn</a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <span>Kanimozhi S · AI & Software Developer</span>
+  <span>Kanimozhi S · Electronics & AI Engineer</span>
   <span>kanimozhisharavanan.github.io</span>
 </footer>
 
